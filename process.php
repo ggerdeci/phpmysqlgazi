@@ -7,6 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	$mysql_password = "user123";
 	$mysql_database = "process";
 	
+//Emiliani
+	
 	$u_name = filter_var($_POST["user_name"], FILTER_SANITIZE_STRING); //set PHP variables like this so we can use them anywhere in code below
 	$u_email = filter_var($_POST["user_email"], FILTER_SANITIZE_EMAIL);
 	$u_text = filter_var($_POST["user_text"], FILTER_SANITIZE_STRING);
