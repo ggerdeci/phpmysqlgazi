@@ -64,16 +64,16 @@ if($result = mysqli_query($link, $sql)){
         echo "<table>";
             echo "<tr>";
                 echo "<th>id</th>";
-                echo "<th>first_name</th>";
-                echo "<th>last_name</th>";
-                echo "<th>email</th>";
+                echo "<th>user_name</th>";
+                echo "<th>user_email</th>";
+                echo "<th>user_message</th>";
             echo "</tr>";
         while($row = mysqli_fetch_array($result)){
             echo "<tr>";
                 echo "<td>" . $row['id'] . "</td>";
-                echo "<td>" . $row['first_name'] . "</td>";
-                echo "<td>" . $row['last_name'] . "</td>";
-                echo "<td>" . $row['email'] . "</td>";
+                echo "<td>" . $row['user_name'] . "</td>";
+                echo "<td>" . $row['user_email'] . "</td>";
+                echo "<td>" . $row['user_message'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";
