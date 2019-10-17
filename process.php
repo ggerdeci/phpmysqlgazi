@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect('172.30.3.205', 'user1', 'user123');
+$link = mysqli_connect('172.30.3.205', 'user1', 'user123', 'process');
  
 // Check connection
 if($link === false){
@@ -57,7 +57,7 @@ if($link === false){
 }
  
 // Attempt select query execution
-mysqli_select_db('process');
+//mysqli_select_db('process');
 $sql = "SELECT * FROM users_data";
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
